@@ -1,0 +1,111 @@
+/* --- ຕັ້ງຄ່າພື້ນຖານ --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Lao', sans-serif; /* ໃຊ້ Font ລາວ */
+}
+
+body {
+    background-color: #ffafc2; /* ພື້ນຫຼັງສີຊົມພູອ່ອນ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* --- Container ຫຼັກ (ຈັດໃຫ້ຢູ່ທາງກາງໜ້າຈໍມືຖື) --- */
+.main-container {
+    width: 100%;
+    max-width: 380px; /* ຂະໜາດພໍດີມືຖື */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- ພື້ນຫຼັງຊັ້ນເບີໆ (Frosted Glass Card) --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15); /* ພື້ນຫຼັງຂາວອ່ອນ */
+    backdrop-filter: blur(15px); /* ເຮັດໃຫ້ເບີໆແບບກະຈົກຝ້າ */
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* ຂອບຂາວອ່ອນ */
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* ເພີ່ມເງົາເບົາໆ */
+    animation: bounceIn 0.8s ease; /* Animation ຕອນເລີ່ມຕົ້ນ */
+}
+
+/* --- ສ່ວນ Tenor GIF --- */
+.gif-wrapper {
+    width: 140px;
+    margin: 0 auto 20px auto; /* ຈັດໃຫ້ຢູ່ກາງ ແລະ ຫ່າງຈາກຂໍ້ຄວາມ */
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 15px rgba(255, 105, 180, 0.2);
+}
+
+/* --- ຂໍ້ຄວາມ H1 ແລະ H3 --- */
+h1.main-title {
+    color: #ff477e; /* ສີຊົມພູເຂັ້ມ */
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+h3.sub-title {
+    color: #ff85a2; /* ສີຊົມພູອ່ອນ */
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px; /* ຫ່າງຈາກປຸ່ມ */
+}
+
+/* --- ປຸ່ມ 2 ປຸ່ມ --- */
+.button-group {
+    display: flex;
+    justify-content: space-between; /* ຈັດໃຫ້ຢູ່ຊ້າຍ ແລະ ຂວາ */
+    gap: 15px; /* ໄລຍະຫ່າງລະຫວ່າງປຸ່ມ */
+}
+
+.btn {
+    flex: 1; /* ບັງຄັບໃຫ້ປຸ່ມມີຂະໜາດເທົ່າກັນ */
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 50px; /* ເຮັດໃຫ້ຂອບມົນ */
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(255, 71, 126, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* ປຸ່ມທາງຊ້າຍ */
+.btn-left {
+    background: linear-gradient(45deg, #ff477e, #ff85a2);
+}
+
+/* ປຸ່ມທາງຂວາ */
+.btn-right {
+    background: linear-gradient(45deg, #ff85a2, #ff477e);
+}
+
+/* ເອັບເຟັກຕອນກົດ ຫຼື ຊີ້ Mouse */
+.btn:hover {
+    transform: translateY(-3px); /* ປຸ່ມເດັ້ງຂຶ້ນ */
+    box-shadow: 0 8px 18px rgba(255, 71, 126, 0.4);
+}
+
+.btn:active {
+    transform: translateY(1px); /* ເວລາກົດໃຫ້ປຸ່ມຫຍໍ້ */
+}
+
+/* --- Animation ຕອນເລີ່ມຕົ້ນ --- */
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
